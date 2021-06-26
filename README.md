@@ -8,7 +8,7 @@ Basic functionality: we want our programme to generate a new advice whenever the
 
 <img src="/project_advice_generator/exampleAdviceGenerator.png" width="600" />
 
-**Basic setup (without API requests): (this is the code in main.js)**
+**Basic setup: (this is the code in main.js)**
 
 1. Create an index.html file with the general template code
 1. Create a main.js file
