@@ -6,7 +6,7 @@ We will use the Advice Slip JSON API for our project (https://api.adviceslip.com
 
 Basic functionality: we want our programme to generate a new advice whenever the user presses the button. A very simple example looks like this:  
 
-<img src="/project_advice_generator/exampleAdviceGenerator.png" width="600" />
+<img src="/exampleAdviceGenerator.png" width="600" />
 
 **Basic setup: (this is the code in main.js)**
 
