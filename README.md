@@ -1,7 +1,88 @@
-## Code for the project Advice Generator (has TWO main.js files)
+## Project Advice Generator
 
-This is a private repo because we want our students to write the code themselves as much as possible. Only the coaches have access to private repos in this GitHub organisation.
+### The goal of this project is to practice working with an API
 
-The code in this repo contains two example solutions: main.js and main2.js. The first one is the simple project with vanilla JavaScript, and uses hard coded advice in an array. The main2.js is the code for working with the advice API.
+We will use HTML, CSS, JavaScript and the [Advice Slip JSON API](https://api.adviceslip.com/#top) for our project.
 
-Suggestions are always welcome (henriette@migracode.org). 
+**Basic functionality:** we want our programme to generate a new advice whenever the user presses the button. A very simple example looks like this:  
+
+<img src="/exampleAdviceGenerator.png" width="600" />
+
+---
+
+### For starters
+
+1. Create a new folder on your local computer with the name: project-advice-generator
+1. Track your code with Git by using git init in the terminal
+1. Create an index.html file with the general template code
+1. Create a style.css file and add this to your HTML file as `<link>` (check how to add CSS to an HTML file)
+1. Make sure you have *Advice Generator* as the title (this will show in the tab when your app runs in the browser)
+1. Build the page according to the example
+1. If you want to challenge yourself, try to make the page more attractive
+
+---
+
+### For more advanced students
+
+**Basic setup (without API requests):**
+
+1. Create a new folder on your local computer with the name: project-advice-generator
+1. Track your code with Git by using git init in the terminal
+1. Create an index.html file with the general template code
+1. Create a main.js file. Copy the array with strings from the `testAdvice.js` file and paste it at the top of your main.js file
+1. Create a style.css file
+1. Use the class names from the HTML file in your CSS
+1. Link the JavaScript file to the HTML document so that the JavaScript code will be able interact with the HTML document
+1. Add a link to the css file in the HTML
+1. Add **Advice Generator** within the `<title>` tags
+1. Add an `<h1>` element with the name of your app as the first element in the `<body>`
+1. Create a `<div>` element with class name of `advice-display`
+1. Add a `<button>` element with class name `advice-button`
+1. The `main.js` file contains an array of strings that you can use for testing the javascript functionality before you start working with the API
+1. The app should always start with a welcome page, also after refresh. The advice texts should only show up when the button is clicked.
+1. Write the function `newAdvice()` that generates a random whole number that ranges from 0 to the length of our advice array
+1. Use the number from the previous step as value called `randomNumber` to get a random advice text 
+1. Display the content of the random advice into the `advice-display` element
+1. Add styling to the style.css file you created 
+
+**Full project, using API requests:**
+
+1. Instead of getting an advice string from the `advice.js` file, you request a random advice using the Advice Slip JSON API (see url at the top of this README)
+1. Write a `getAdvice()` function and use this as the onclick attribute for the button
+1. The `getAdvice()` function should return a random advice from the Advice Slip JSON API
+1. The function should return "Something has gone wrong" if there is an error
+1. Show the response data (the advice) in the `advice-display` element
+1. Since the Advice Slip endpoint for random advice takes time to reload, you cannot click the button quickly, one time after the other. This will generate the same advice, even though you use the random endpoint. Solve this problem!
+
+**Challenge yourself:**
+
+1. Create an advice for every day of the week
+1. Let the advice-display font-size increase or decrease in size depending upon the viewport
+1. Let the advice-display box increase or decrease in size depending upon the amount of text
+1. Improve the design and layout, make it look good but keep the app responsive
+
+---
+
+### For graduates
+
+1. Build this project as React app
+1. Use create-react-app, create components and write the code for the functionality explained above
+1. Challenge yourself: create advice cards that are continuously added and remain on the screen when a new advice is generated
+1. Make it into an attractive app
+
+---
+
+## Please note:
+If you want to download a project on your local machine, do not fork it but clone the repo locally, on your computer. After that, create a new repo in your own GitHub account *with exactly the same project name*, and link the local repo to the remote repo in your GitHub account (see below). Why should you clone and not fork? It will show the project as **your own project** and not a fork of someone else's project. You can use it as a project for your portfolio.
+
+You can connect a local project to a new, empty GitHub repo [as follows](https://docs.github.com/en/github/importing-your-projects-to-github/adding-an-existing-project-to-github-using-the-command-line). We can do this together during a CodeWomen coding session: it is very good to know this so that you can start a project locally and afterwards link it with a remote GitHub repo.
+
+If you clone the project without forking it, you will have to change the 'remote origin' repository after cloning. Check the remote of your local project using `git remote -v`. You will probably see:  
+`origin  https://github.com/CodeWomen-Barcelona/some-codewomen-project.git (fetch)`  
+`origin  https://github.com/CodeWomen-Barcelona/some-codewomen-project.git (push)`
+
+To link your local project to your own GitHub repo, you need to change the remote origin. Have a look at this article: https://devconnected.com/how-to-change-git-remote-origin/. With `git remote -v` you can again check if remote origin has been reset and now shows the name of your GitHub account.
+
+PS: if you work for a company that has a corporate social responsibility policy and wants to support women in tech, then here is the link to the [fundraising overview of MigraCode](https://docs.google.com/spreadsheets/d/1Zs-Mmi39bcjVw2U-iEQWSHSjkb-EmET-j1WB2oJF45Q/edit#gid=0).
+
+---
